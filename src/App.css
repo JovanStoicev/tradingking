@@ -1,8 +1,8 @@
 .delete-button {
-  visability: hidden;
+  visibility: hidden;
   display: inline-block;
 }
 
-.dable-row:hover .delete-button {
+.table-row:hover .delete-button {
   visibility: visible;
 }

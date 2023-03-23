@@ -5,9 +5,6 @@ const StockChart = ({ chartData, symbol }) => {
   const [dateFormat, setDateFormat] = useState("24h")
   const { day, week, year } = chartData
 
-  // console.log(chartData)
-  
-
   const determineTimeFormat = () => {
     switch (dateFormat) {
       case "24h":
@@ -20,13 +17,13 @@ const StockChart = ({ chartData, symbol }) => {
         return day
     }
   }
-  const timeConst = determineTimeFormat()
-  console.log(Object.keys(timeConst).length)
-  const color = timeConst?.[Object.entries(timeConst).length].y - timeConst?.[1].y > 0 ? "#26c281" : "#ed3419"  
-
-  // console.log(color)
+  let color = []; 
+  if(Object.entries(chartData).length > 0) { 
+    color = determineTimeFormat()[determineTimeFormat().length - 1].y - determineTimeFormat()[0].y > 0 ? "#26c281" : "#ed3419" 
+  }
+  
   const options = {
-    // colors: [color],
+    colors: [color],
     title: {
       text: symbol,
       align: "center",
