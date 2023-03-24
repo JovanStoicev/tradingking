@@ -3,12 +3,10 @@ import StockOverviewPage from './pages/StockOverviewPage'
 import StockDetailPage from './pages/StockDetailPage'
 import './App.css'
 import { WatchListContextProvider } from './context/watchListContext'
-import tradingKing from './image/tradingKing.jpg'
 
 export default function App() {
   return (
     <main className="container">
-      <img src={tradingKing} alt="photo" className="img-center" />
       <WatchListContextProvider>
         <BrowserRouter>
           <Routes>
