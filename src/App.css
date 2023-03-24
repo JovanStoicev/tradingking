@@ -6,3 +6,11 @@
 .table-row:hover .delete-button {
   visibility: visible;
 }
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+
+}
