@@ -8,6 +8,7 @@ const StockOverviewPage = () => {
       <img src={tradingKing} alt="photo" className="img-center" />
       <AutoComplete />
       <StockList />
+      <p style={{ textAlign: 'center' }}>Click on stock to see details</p>
     </div>
   )
 }
